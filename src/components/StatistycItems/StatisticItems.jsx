@@ -1,5 +1,6 @@
 import React from 'react';
 import { Item, Box } from './StatisticItems.styled';
+import PropTypes from 'prop-types';
 
 export const StatisticItems = ({ state, total, feedback }) => {
   return (
@@ -22,4 +23,11 @@ export const StatisticItems = ({ state, total, feedback }) => {
       </Item>
     </Box>
   );
+};
+StatisticItems.propTypes = {
+  state: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -29,3 +30,6 @@ function chooseMethod(option, onLeaveFeedback) {
     return onLeaveFeedback[2];
   }
 }
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+};
